@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rendering Local Images Using Flask</title>
+    <link rel="stylesheet" href="../static/styles/styles.css">
+</head>
+<body>
+<!--<img src= "{{url_for('static', filename='Images/vhd.jpg')}}" >-->
+<!--<img src="{{image_file}}", width="{{wdt}}">-->
+<img src="{{ url_for('static', filename='images/' ~ filename)}}", width="{{wdt}}">
+</body>
+<footer>
+    <p>Copyright {{CopyrightYear}}</p>
+</footer>
+</html>

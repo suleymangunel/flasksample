@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GUESS</title>
+    <link rel="stylesheet" href="../static/styles/styles.css">
+</head>
+<body>
+<footer>
+    <p>Cinsiyet: {{gender}}, İsim: {{_name}}</p>
+    {% for name in _names %}
+        {% if name == _name %}
+            <p> {{name}} is cool!</p>
+        {% else %}
+            <p> {{name}} </p>
+        {% endif %}
+    {% endfor %}
+</footer>
+<a href="{{url_for('write_message')}}">Goto Message</a>
+</body>
+</html>
